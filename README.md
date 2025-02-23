@@ -11,4 +11,7 @@
 ![image](https://github.com/user-attachments/assets/7839623b-b4a4-450b-8593-784fb51840de)
 * h. 谷歌这种形态就是完美形态。第一点处于低估，第二点，未来两年都是增长的。第三点，完美多头的上升趋势线，说明多方完美控盘，一致认可向上的估值。现在的上升趋势线，指向12个月和24个月前瞻估值的中值。不出现大幅度的偏离，都说明市场预期业绩一致。
 ![image](https://github.com/user-attachments/assets/708ad98b-f789-4baa-acdc-2fa9aafb5495)
-
+3. 使用方法。基本原理，当考量股票价值的时候，要看分析师对EPS预期的估计是更好还是更差了，另外就是和历史PE是否偏离很多。
+  a. 使用RapidAPI 更新前瞻两年的EPS
+  b. 使用DCF_data 更新DCF 的结果
+  c. 使用Cvalue_history 记录历史，方便以后对比
