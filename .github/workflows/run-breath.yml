@@ -29,5 +29,5 @@ jobs:
       - name: scp image to render server
         env:
           SSH_PRIVATE_KEY: ${{ secrets.RENDER_SSH_KEY }}
-        run: |
-          scp -i private_key -o StrictHostKeyChecking=no output.png $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH
+        run:           
+          scp output.png ${{ secrets.RENDER_SSH_KEY }}@ssh.oregon.render.com:/pv/output.png
