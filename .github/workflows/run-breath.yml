@@ -26,7 +26,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Python script
-        run: python ./breath.py
+        run: python breath.py
 
       - name: Upload output.png to Render via SCP
         uses: appleboy/scp-action@v0.1.4
