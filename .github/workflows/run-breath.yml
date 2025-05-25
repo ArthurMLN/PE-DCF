@@ -1,10 +1,12 @@
-name: Run Python Script
+name: Run Python Script and Upload
+
 on:
-   schedule:
-     - cron: '0 12 * * *'
-   push:
-      branchese"
-         - main:
+  schedule:
+    - cron: '0 12 * * *'  # 每天 UTC 中午 12 点运行（可按需修改）
+  push:
+    branches:
+      - main
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -16,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'  # change if needed
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -25,8 +27,13 @@ jobs:
 
       - name: Run Python script
         run: python ./breath.py
-      - name: scp image to render server
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.RENDER_SSH_KEY }}
-        run:           
-          scp output.png ${{ secrets.RENDER_SSH_KEY }}@ssh.oregon.render.com:/pv/output.png
+
+      - name: Upload output.png to Render via SCP
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ssh.oregon.render.com
+          username: srv-d0h58u0dl3ps73ciqh40  # 用你自己的 Render SSH 用户名
+          key: ${{ secrets.RENDER_SSH_KEY }} # 私钥内容保存在 GitHub Secrets 中
+          port: 22
+          source: "output.png"
+          target: "/pv/output.png"
