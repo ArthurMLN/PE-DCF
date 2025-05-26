@@ -28,7 +28,7 @@ jobs:
       - name: Run Python script      
         run: python ./code/breath.py
 
-      - name: Upload png
+      - name: Upload png to server
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ssh.oregon.render.com
