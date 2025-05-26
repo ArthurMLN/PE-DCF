@@ -25,9 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Python script
-        # This script should ensure the 'home/zybf1208/django/ship-.csv' file is created/updated
-        # or this file should already exist at this path in your repository.
+      - name: Run Python script      
         run: python ./code/breath.py
 
       - name: Upload ship-.csv to Render via SCP
@@ -37,5 +35,5 @@ jobs:
           username: srv-d0h58u0dl3ps73ciqh40  # Your Render SSH username
           key: ${{ secrets.RENDER_SSH_KEY }} # Private key stored in GitHub Secrets
           port: 22
-          source: "home/zybf1208/django/ship-.csv" # IMPORTANT: Path to your CSV file within the GitHub Actions workspace (repo)
-          target: "/pv/ship.csv"                    # Target path on Render server
+          source: "output.png" # IMPORTANT: Path to your CSV file within the GitHub Actions workspace (repo)
+          target: "/pv/output.png"                    # Target path on Render server
