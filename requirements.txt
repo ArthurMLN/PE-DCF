@@ -12,4 +12,4 @@ requests
 pytz
 
 # 运行 Jupyter Notebook 脚本的工具
-peppermint
+papermill
