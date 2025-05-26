@@ -35,5 +35,5 @@ jobs:
           username: srv-d0h58u0dl3ps73ciqh40  # Your Render SSH username
           key: ${{ secrets.RENDER_SSH_KEY }} # Private key stored in GitHub Secrets
           port: 22
-          source: "marketBreath-3Y.png" # IMPORTANT: Path to your CSV file within the GitHub Actions workspace (repo)
-          target: "/pv/marketBreath-3Y.png"                    # Target path on Render server
+          source: "marketBreath-3Y.png market_breadth_series.pkl" # IMPORTANT: Path to your CSV file within the GitHub Actions workspace (repo)
+          target: "/pv/"                    # Target path on Render server
