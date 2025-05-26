@@ -40,5 +40,5 @@ jobs:
           username: srv-d0h58u0dl3ps73ciqh40  # Your Render SSH username
           key: ${{ secrets.RENDER_SSH_KEY }} # Private key stored in GitHub Secrets
           port: 22          
-          source: "wsj_data.txt" 
+          source: "wsj_market_data.txt" 
           target: "/pv/"                    # Target path on Render server      
