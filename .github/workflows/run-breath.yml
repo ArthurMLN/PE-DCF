@@ -26,7 +26,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Python script      
-        run: python -m papermill breath.ipynb breath-exe.ipynb
+        run: python -m papermill breath.ipynb breathexe.ipynb
 
       - name: Upload png to server
         uses: appleboy/scp-action@v0.1.4
