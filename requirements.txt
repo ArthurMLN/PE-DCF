@@ -1,2 +1,15 @@
-pandas
 pillow
+# 核心科学计算与数据分析库
+numpy
+pandas
+matplotlib
+seaborn
+
+# 网络请求
+requests
+
+# 时间处理
+pytz
+
+# 运行 Jupyter Notebook 脚本的工具
+peppermint
