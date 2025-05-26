@@ -1,4 +1,4 @@
-name: Run Python Script and Upload CSV
+name: Run market breath and scp to render server
 
 on:
   schedule:
