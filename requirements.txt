@@ -20,3 +20,7 @@ jupyter-client>=7.0.0
 jupyter-core>=5.0.0
 nbformat>=5.0.0
 nbclient>=0.5.0
+#web
+selenium
+webdriver-manager
+beautifulsoup4
