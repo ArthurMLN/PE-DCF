@@ -3,9 +3,9 @@ name: Run market breath and scp to render server
 on:
   schedule:
     - cron: '0 12 * * *'  # 每天 UTC 中午 12 点运行（可按需修改） (Runs daily at 12 PM UTC, can be modified as needed)
-  #push:
-    #branches:
-      #- main
+  push:
+    branches:
+      - main
 
 jobs:
   run-script-and-upload-csv: # Renamed job for clarity
