@@ -30,7 +30,7 @@ jobs:
       - name: Run Python script      
         run: python -m papermill breath.ipynb breathexe.ipynb
 
-      - name: Upload png to server
+      - name: Upload pkl to server
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ssh.oregon.render.com
@@ -39,4 +39,14 @@ jobs:
           port: 22
           #source: "marketBreath-3Y.png" #market_breadth_series.pkl" 
           source: "market_breadth_series.pkl" 
+          target: "/pv/"                    # Target path on Render server
+      - name: Upload png to server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ssh.oregon.render.com
+          username: srv-d0h58u0dl3ps73ciqh40  # Your Render SSH username
+          key: ${{ secrets.RENDER_SSH_KEY }} # Private key stored in GitHub Secrets
+          port: 22
+          source: "marketBreath-3Y.png" #market_breadth_series.pkl" 
+          #source: "market_breadth_series.pkl" 
           target: "/pv/"                    # Target path on Render server
