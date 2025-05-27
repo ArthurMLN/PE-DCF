@@ -33,7 +33,7 @@ jobs:
       - name: Run Python script      
         run: python -m papermill wsj-NHNL.ipynb wsj-NHNLexe.ipynb
 
-      - name: Upload pkl to server
+      - name: Upload wsj_market to server
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ssh.oregon.render.com
@@ -41,4 +41,13 @@ jobs:
           key: ${{ secrets.RENDER_SSH_KEY }} # Private key stored in GitHub Secrets
           port: 22          
           source: "wsj_market_data.txt" 
+          target: "/pv/"                    # Target path on Render server    
+      - name: Upload cnn_fear_greed_data to server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ssh.oregon.render.com
+          username: srv-d0h58u0dl3ps73ciqh40  # Your Render SSH username
+          key: ${{ secrets.RENDER_SSH_KEY }} # Private key stored in GitHub Secrets
+          port: 22          
+          source: "cnn_fear_greed_data.txt" 
           target: "/pv/"                    # Target path on Render server      
