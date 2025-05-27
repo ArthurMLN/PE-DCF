@@ -32,7 +32,8 @@ jobs:
 
       - name: Run Python script      
         run: python -m papermill wsj-NHNL.ipynb wsj-NHNLexe.ipynb
-
+      - name: List files in workspace
+        run: ls -lR # -R for recursive listing, useful if it might be in a subdir
       - name: Upload wsj_market to server
         uses: appleboy/scp-action@v0.1.4
         with:
