@@ -8,7 +8,7 @@ on:
       - 'breath.ipynb'  # 只有当该文件被修改时才触发
     branches:
       - main
-
+  workflow_dispatch: # This enables the manual trigger
 jobs:
   run-script-and-upload-csv: # Renamed job for clarity
     runs-on: ubuntu-latest
