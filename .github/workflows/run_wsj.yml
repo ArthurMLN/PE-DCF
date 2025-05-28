@@ -2,7 +2,9 @@ name: Run wsj NHNL
 
 on:
   schedule:
-    - cron: '45 13 * * *'  # 每天 UTC 中午 12 点运行（可按需修改） (Runs daily at 12 PM UTC, can be modified as needed)
+    - cron: '45 13 * * *'  # 每天 UTC 13:45 运行 (Runs daily at 1:45 PM UTC)
+    - cron: '30 15 * * *'  # 每天 UTC 15:30 运行 (Approx. Houston 10:30 AM CDT / 9:30 AM CST)
+    - cron: '30 19 * * *'  # 每天 UTC 19:30 运行 (Approx. Houston 2:30 PM CDT / 1:30 PM CST)
   push:
     paths:
       - 'wsj-NHNL.ipynb'  # 只有当该文件被修改时才触发
