@@ -10,7 +10,7 @@ on:
       - main
   workflow_dispatch: # This enables the manual trigger
 jobs:
-  run-script-and-upload-csv: # Renamed job for clarity
+  run-script-breath-pkl: # Renamed job for clarity
     runs-on: ubuntu-latest
 
     steps:
