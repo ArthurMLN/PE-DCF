@@ -38,5 +38,5 @@ jobs:
           username: srv-d0h58u0dl3ps73ciqh40  # Your Render SSH username
           key: ${{ secrets.RENDER_SSH_KEY }} # Private key stored in GitHub Secrets
           port: 22
-          source: "plan-c.db" 
-          target: "/pv/"                    # Target path on Render server      
+          source: "plan.db" 
+          target: "/pv/plan-c.db"                    # Target path on Render server      
