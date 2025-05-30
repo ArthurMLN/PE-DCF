@@ -29,7 +29,7 @@ jobs:
       - name: List files in workspace
         run: ls -lR # -R for recursive listing, useful if it might be in a subdir
       - name: Run Python script      
-        run: python -m papermill breath.ipynb breathexe.ipynb
+        run: python -m papermill breath.ipynb value.ipynb
 
       - name: Upload plandb to server
         uses: appleboy/scp-action@v0.1.4
