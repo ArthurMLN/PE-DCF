@@ -12,7 +12,7 @@ on:
       - main
   workflow_dispatch: # This enables the manual trigger
 jobs:
-  run-script-and-upload-csv: # Renamed job for clarity
+  run-script-wsj-cnn: # Renamed job for clarity
     runs-on: ubuntu-latest
 
     steps:
