@@ -1,4 +1,4 @@
-name: Run market breath and scp to render server
+name: Run value to update peg,last price
 
 on:
   #schedule:
