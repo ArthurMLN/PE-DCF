@@ -33,7 +33,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Python script      
-        run: python -m papermill wsj-NHNL.ipynb wsj-NHNLexe.ipynb
+        run: python -m papermill wsj-NHNL-2.ipynb wsj-NHNLexe.ipynb
       - name: List files in workspace
         run: ls -lR # -R for recursive listing, useful if it might be in a subdir
       - name: Upload wsj_market to server
